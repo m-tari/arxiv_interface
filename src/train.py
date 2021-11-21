@@ -25,7 +25,7 @@ def train_model(n_folds, model, save_model='n'):
 	# initialize vectorizer
 	tfidf = TfidfVectorizer(
 		analyzer='word', 
-		max_features=1000, 
+		max_features=5000, 
 		ngram_range=(1, 2), 
 		stop_words='english', 
 		token_pattern='(?ui)[a-z]+[a-z]+'
@@ -35,12 +35,12 @@ def train_model(n_folds, model, save_model='n'):
 	kf = model_selection.KFold(n_splits=n_folds)
 
 	X_train = df[config.features]
-	y_data = df[config.labels]
+	y_train = df.iloc[:, 2:]
 
 	# convert labels to 0's and 1's
-	multilabel = MultiLabelBinarizer()
-	y = multilabel.fit_transform(y_data)
-	y_train = pd.DataFrame(y, columns=multilabel.classes_)
+	# multilabel = MultiLabelBinarizer()
+	# y = multilabel.fit_transform(y_data)
+	# y_train = pd.DataFrame(y, columns=multilabel.classes_)
 
 	best_score = 0
 
