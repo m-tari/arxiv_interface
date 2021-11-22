@@ -4,7 +4,7 @@ import os
 # import config
 
 # loading the trained model
-model_bin = open('../models/n_bayes_score_0.32.bin', 'rb') 
+model_bin = open('./models/n_bayes_score_0.32.bin', 'rb') 
 classifier = joblib.load(model_bin)
 
 
@@ -53,7 +53,6 @@ def main():
 		max_chars=850, 
 		value="We derive a new fully implicit formulation for the "
 		)
-	print(txt)
 
 	st.button("Categorize the abstract", on_click=get_category, args=(txt, ))
 	st.write('Categories:', st.session_state.category)	
