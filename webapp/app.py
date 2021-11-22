@@ -51,7 +51,7 @@ def main():
 	txt = st.text_area('Abstract to analyze:', 
 		height=400,
 		max_chars=850, 
-		value="We derive a new fully implicit formulation for the "
+		value="We derive a new fully implicit formulation for the ..."
 		)
 
 	st.button("Categorize the abstract", on_click=get_category, args=(txt, ))
