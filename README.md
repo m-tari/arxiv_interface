@@ -18,4 +18,4 @@ Dataset used in this project is the a [metadata file of the arXiv dataset](https
 ## Milestones
 
 ## References
-[1] https://www.kaggle.com/Cornell-University/arxiv
+[1] https://arxiv.org/
