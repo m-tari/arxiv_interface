@@ -1,2 +1,5 @@
 /input/archive/
 /input/archive.zip
+/input/*.csv
+/input/*.pkl
+src/__pycache__/
