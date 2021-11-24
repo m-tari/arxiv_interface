@@ -2,3 +2,4 @@
 /input/archive.zip
 src/__pycache__/
 /arxiv_venv/
+notebooks/.ipynb_checkpoints/

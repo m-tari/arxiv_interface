@@ -79,7 +79,7 @@ def train_model(n_folds, model, save_model='n'):
 	if save_model=='y':
 		joblib.dump(
 			best_clf,
-			os.path.join(config.MODEL_OUTPUT_PATH, f"{model}_f1score_{best_score:.2f}.bin")
+			config.MODEL_OUTPUT_PATH
 		)
 
 if __name__ == "__main__":

@@ -1,10 +1,10 @@
 import streamlit as st
 import joblib
 import os
-# import config
+from src.config import M
 
 # loading the trained model
-model_bin = open('./models/n_bayes_score_0.32.bin', 'rb') 
+model_bin = open(MODEL_OUTPUT_PATH, 'rb') 
 classifier = joblib.load(model_bin)
 
 

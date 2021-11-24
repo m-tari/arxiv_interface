@@ -1,13 +1,16 @@
 import os
 
 input_file = 'sample_df_2021.pkl'
+model_file = 'classifier_model.bin'
 
 input_dir = 'input'
 model_dir = 'models'
 
-SRC_PATH = os.path.dirname(os.getcwd())
-INPUT_FILE_PATH = os.path.join(SRC_PATH, input_dir, input_file)
-MODEL_OUTPUT_PATH = os.path.join(SRC_PATH, model_dir)
+
+ROOt_PATH = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+SRC_PATH = os.path.abspath(os.path.dirname(__file__))
+INPUT_FILE_PATH = os.path.join(ROOt_PATH, input_dir, input_file)
+MODEL_OUTPUT_PATH = os.path.join(ROOt_PATH, model_dir, model_file)
 
 
 features = 'abstract'
