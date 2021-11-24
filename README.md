@@ -1,7 +1,7 @@
 ### status: under development
 
 # A Web Interface for arXiv articles
-Web-app : https://share.streamlit.io/m-tari/arxiv_interface/webapp/app.py
+Web-app : https://share.streamlit.io/m-tari/arxiv_interface/webapp.py
 ## Overview
 
 ## Background and Motivation
