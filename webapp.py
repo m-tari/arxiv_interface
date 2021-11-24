@@ -1,10 +1,10 @@
 import streamlit as st
 import joblib
 import os
-from src.config import M
+from src import config
 
 # loading the trained model
-model_bin = open(MODEL_OUTPUT_PATH, 'rb') 
+model_bin = open(config.MODEL_OUTPUT_PATH, 'rb') 
 classifier = joblib.load(model_bin)
 
 
