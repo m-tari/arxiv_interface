@@ -20,7 +20,7 @@ import clean_text
 def train_model(n_folds, model, save_model='n'):
 
 	# read the training
-	df = pd.read_pickle(config.INPUT_FILE_PATH)
+	df = pd.read_csv(config.INPUT_FILE_PATH, converters={config.labels: pd.eval})
 
 	# initialize vectorizer
 	tfidf = TfidfVectorizer(
@@ -28,21 +28,20 @@ def train_model(n_folds, model, save_model='n'):
 		max_features=5000, 
 		ngram_range=(1, 2), 
 		stop_words='english', 
-		token_pattern='(?ui)[a-z]+[a-z]+'
+		token_pattern='(?ui)[a-z]+[a-z]+',
+		max_df=0.9
 	) 
 
 	# initiate the kfolds method
 	kf = model_selection.KFold(n_splits=n_folds)
 
 	X_train = df[config.features]
-	y_train = df.iloc[:, 2:]
+	y_data = df[config.labels]
 
 	# convert labels to 0's and 1's
-	# multilabel = MultiLabelBinarizer()
-	# y = multilabel.fit_transform(y_data)
-	# y_train = pd.DataFrame(y, columns=multilabel.classes_)
-
-	best_score = 0
+	multilabel = MultiLabelBinarizer()
+	y = multilabel.fit_transform(y_data)
+	y_train = pd.DataFrame(y, columns=multilabel.classes_)
 
 	for train_index, test_index in kf.split(X_train, y_train):
 			
@@ -71,14 +70,10 @@ def train_model(n_folds, model, save_model='n'):
 		score = f1_score(y_test_fold, preds, average='macro')
 		print("f1_score:", score)
 
-		if score>best_score:
-			best_score = score
-			best_clf = clf
-
 	# save the model
 	if save_model=='y':
 		joblib.dump(
-			best_clf,
+			clf,
 			config.MODEL_OUTPUT_PATH
 		)
 

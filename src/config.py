@@ -1,6 +1,6 @@
 import os
 
-input_file = 'sample_df_2021.pkl'
+input_file = 'sample_df_2021.csv'
 model_file = 'classifier_model.bin'
 
 input_dir = 'input'
