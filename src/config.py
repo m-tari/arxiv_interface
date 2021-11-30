@@ -7,7 +7,7 @@ input_dir = 'input'
 model_dir = 'models'
 
 
-ROOt_PATH = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+ROOT_PATH = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 SRC_PATH = os.path.abspath(os.path.dirname(__file__))
 INPUT_FILE_PATH = os.path.join(ROOt_PATH, input_dir, input_file)
 MODEL_OUTPUT_PATH = os.path.join(ROOt_PATH, model_dir, model_file)
