@@ -72,6 +72,13 @@ def train_model(n_folds, model, save_model='n'):
 
 	# save the model
 	if save_model=='y':
+
+		# transform the dataset and train on all the data
+		X_train_trans = tfidf.fit_transform(X_train)
+
+		# fit the model on all the data
+		clf.fit(X_train_folds_trans, y_train_folds)
+
 		joblib.dump(
 			clf,
 			config.MODEL_OUTPUT_PATH
