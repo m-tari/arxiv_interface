@@ -12,7 +12,7 @@ import nltk
 from nltk.tokenize import word_tokenize
 
 # custom libraries
-import config
+import config_set
 import model_dispatcher
 import clean_text
 
@@ -20,7 +20,7 @@ import clean_text
 def train_model(n_folds, model, save_model='n'):
 
 	# read the training
-	df = pd.read_csv(config.INPUT_FILE_PATH, converters={config.labels: pd.eval})
+	df = pd.read_csv(config_set.INPUT_FILE_PATH, converters={config_set.labels: pd.eval})
 
 	# initialize vectorizer
 	tfidf = TfidfVectorizer(
@@ -35,8 +35,8 @@ def train_model(n_folds, model, save_model='n'):
 	# initiate the kfolds method
 	kf = model_selection.KFold(n_splits=n_folds)
 
-	X_train = df[config.features]
-	y_data = df[config.labels]
+	X_train = df[config_set.features]
+	y_data = df[config_set.labels]
 
 	# convert labels to 0's and 1's
 	multilabel = MultiLabelBinarizer()
@@ -81,12 +81,12 @@ def train_model(n_folds, model, save_model='n'):
 
 		joblib.dump(
 			clf,
-			config.MODEL_OUTPUT_PATH
+			config_set.MODEL_OUTPUT_PATH
 		)
 
 		joblib.dump(
 			tfidf,
-			config.VECTORIZER_PATH
+			config_set.VECTORIZER_PATH
 		)
 
 if __name__ == "__main__":
