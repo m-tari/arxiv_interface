@@ -11,7 +11,7 @@ def suggest_title(txt):
 	st.session_state.title  = "A thought-provoking title"
 	return st.session_state.title
 
-@st.cache(ttl=600)
+# @st.cache(ttl=600)
 def suggest_articles(title, input_abstract):
 	st.session_state.articles = semantic_search.search_papers('title', input_abstract)
 	return st.session_state.articles	
