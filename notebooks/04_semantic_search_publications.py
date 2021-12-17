@@ -5,9 +5,9 @@
 
 # # Semantic Search in Publications
 # 
-# This notebook demonstrates how [sentence-transformers](https://www.sbert.net) to find similar publications ([source](https://colab.research.google.com/drive/12cn5Oo0v3HfQQ8Tv6-ukgxXSmT3zl35A?usp=sharing)).
+# This notebook demonstrates how [sentence-transformers](https://www.sbert.net) library can be used to find similar publications ([source](https://colab.research.google.com/drive/12cn5Oo0v3HfQQ8Tv6-ukgxXSmT3zl35A?usp=sharing)).
 # 
-# As corpus, we use 100k articles from arXiv dataset that are published after 2021.
+# As corpus, we use 100k articles from the arXiv dataset that are published after 2021.
 # 
 
 # In[2]:
