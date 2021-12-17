@@ -20,7 +20,7 @@ Dataset used in this project is the [metadata file of the arXiv dataset](https:/
 - ~Build a classical machine learning classifer for automatic tagging of articles~
 - ~Use transformers for title generation~
 - ~Build a recommender system for similar articles~
-- Apply RNNs fro title generation and compare the performance with transformers
+- Apply RNNs for title generation and compare the performance with transformers
 - Try different word embeddings (using Word2Vec, GloVe, etc)
 ## References
 [1] https://arxiv.org/
