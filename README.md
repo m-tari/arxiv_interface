@@ -1,9 +1,9 @@
 ### status: under development
 
-# A Web Interface for arXiv articles
+# ResA: an AI-powered virtual assistant for scientists
 Web-app : https://share.streamlit.io/m-tari/arxiv_interface [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/m-tari/arxiv_interface)
 
-*(note: article classification and title generation parts are not implemented in the web-app yet.)*
+*(note: article classification part is not implemented in the web-app yet.)*
 ## Overview
 
 ## Background and Motivation

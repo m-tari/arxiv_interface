@@ -2,6 +2,7 @@
 /input/archive/
 /input/archive.zip
 src/__pycache__/
+/models/t5_small_summarization_model/
 /arxiv_venv/
 notebooks/.ipynb_checkpoints/
 .streamlit/*
