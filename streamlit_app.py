@@ -135,7 +135,7 @@ def main():
 
 	# suggest a title for the abstract
 	st.subheader("Suggest a title!")
-	min_length, max_length = st.slider("Choose minimum and maximum length of the title!", value=[10,50], min_value=2, max_value=100)
+	min_length, max_length = st.slider("Choose minimum and maximum length of the title!", value=[10,50], min_value=1, max_value=100)
 	get_title_but = st.button("Suggest a title for the abstract", on_click=suggest_title, args=(input_abstract, min_length, max_length))
 	st.write('Title:', st.session_state.title)
 
