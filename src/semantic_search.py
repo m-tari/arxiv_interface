@@ -1,10 +1,6 @@
 from sentence_transformers import util
 import pandas as pd
 
-# custom libraries
-from . import config_set
-
-
 def search_papers(abstract, df, model, corpus_embeddings):
 	query_embedding = model.encode(abstract, convert_to_tensor=True)
 
