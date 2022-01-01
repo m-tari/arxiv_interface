@@ -85,7 +85,7 @@ def main():
 
 	st.write(
 	'''
-	# ResA: an AI-powered virtual assistant for scientists
+	# Viresa: an AI-powered virtual assistant for scientists
 
 	'''
 	)
