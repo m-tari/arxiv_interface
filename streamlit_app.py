@@ -7,7 +7,7 @@ import torch
 from transformers import TFAutoModelForSeq2SeqLM, AutoTokenizer
 from sentence_transformers import SentenceTransformer
 
-from src import config_set, semantic_search, summarizer
+from src import semantic_search, summarizer
 
 #############################
 # loading models and datasets
