@@ -149,11 +149,11 @@ def main():
 		article_number = 1
 		for index, article in st.session_state.articles.iterrows():
 
-			link = "https://arxiv.org/abs/"+str(article['id'])
+			link = f"https://arxiv.org/abs/{article['id']}"
 			st.write(article_number, "**Title**: ",article['title'])
 			st.markdown("**Abstract**:")
 			st.write(article['abstract'][:600], "...")
-			st.markdown("**Link**: "+"["+link+"]"+"("+link+")")	
+			st.markdown(f"**Link**: [{link}]({link})")	
 			st.markdown("***")		
 			article_number += 1
 
