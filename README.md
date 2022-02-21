@@ -5,6 +5,7 @@ Web-app : https://share.streamlit.io/m-tari/arxiv_interface [![Streamlit App](ht
 
 *(note: article classification part is not implemented in the web-app yet.)*
 ## Overview
+A common task for scientists is to extract knowledge from scientific articles: What area of research does it belong to? What is the best one-line summary of the context? What are the relevant articles to the new information? We built a tool to answer these questions!
 
 ## Background and Motivation
 ArXiv is a collaboratively funded, community-supported resource founded by Paul Ginsparg in 1991 and maintained and operated by Cornell University [1]. They promote open scientific collaboration and progress by providing tools and contents for scientists all over the world. Our hope is that by using the rich dataset of scholary articles and powerfull machine learning techniques we discover insights about scientific works, and we try to build simple tools to explore the dataset for trend analysis, paper recommender engines, category prediction, and more.
