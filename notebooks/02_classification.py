@@ -31,11 +31,11 @@ df_20k.head()
 
 # Since machine learning models only accept numbers as an input, we need to convert words to numbers. There are many techniques for this task, and one of the simplest ones is to make a vector of abstract using **TF-IDF** method. The numeric representation of each word is proportional to frequency of the word in documents ([more about TF-IDF](https://en.wikipedia.org/wiki/Tf%E2%80%93idf)).
 
-# When abstracts are converted to numbers, we feed the the `abstract` as features and `general_category` as labels to the model for training. A simple model that is frquently use for text classification is Naive Bayes model. The Naive Bayes models predicts the category of an article based on prior knowledge of features of a class in training data. The limitation of Naive Bayes moedl is that is assumes features (in our case words) are not correlated, which might not be true for many cases. Despite this limitation, Naive Bayes is fast and can be used as strong base model.
+# When abstracts are converted to numbers, we feed the the `abstract` as features and `general_category` as labels to the model for training. A simple model that is frequently use for text classification is Naive Bayes model. The Naive Bayes models predicts the category of an article based on prior knowledge of features of a class in training data. The limitation of Naive Bayes model is that is assumes features (in our case words) are not correlated, which might not be true for many cases. Despite this limitation, Naive Bayes is fast and can be used as strong base model.
 
 # ## Evaluation
 
-# In order to evaluate the perfomance of our model, we need to select a suitable metric. In a calssification problem, accuracy, precision and recall are the most commen metrics. Since our dataset is imbalanced, accuracy will not be a good choice to measure the perfomance. Our goal is to accurately identify a label in our predictions (high precision), and also we want to identify most of the samples of a label (high recall). So we select f1-score as our metric, since it is a harmonic mean of the two previous metrics.
+# In order to evaluate the performance of our model, we need to select a suitable metric. In a classification problem, accuracy, precision and recall are the most common metrics. Since our dataset is imbalanced, accuracy will not be a good choice to measure the performance. Our goal is to accurately identify a label in our predictions (high precision), and also we want to identify most of the samples of a label (high recall). So we select f1-score as our metric, since it is a harmonic mean of the two previous metrics.
 
 # So the steps for the model training are:
 #     
@@ -50,7 +50,7 @@ df_20k.head()
 
 # Let's train our first model with 3 folds:
 
-# In[3]:
+# In[4]:
 
 
 dir_path = os.path.dirname(os.getcwd())
@@ -60,10 +60,10 @@ if SRC_PATH not in sys.path:
     sys.path.append(SRC_PATH)
 
 
-# In[4]:
+# In[5]:
 
 
-import train, config
+import train, config_set
 from train import train_model
 
 
@@ -82,13 +82,13 @@ train_model(3, 'n_bayes')
 
 # So now let's load the second dataset.
 
-# In[36]:
+# In[2]:
 
 
 sample_df = pd.read_csv('../input/sample_df_2021.csv', converters={'general_category': pd.eval})
 
 
-# In[37]:
+# In[3]:
 
 
 sample_df['general_category'][1]
@@ -98,10 +98,10 @@ sample_df['general_category'][1]
 
 
 import importlib
-importlib.reload(config)
+importlib.reload(config_set)
 
 
-# In[6]:
+# In[8]:
 
 
 train_model(3, 'n_bayes') 
