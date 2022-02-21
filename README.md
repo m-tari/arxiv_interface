@@ -16,8 +16,6 @@ To build a multi-label multiclass classification model capable of automatic tagg
 ## Datasets
 Dataset used in this project is the [metadata file of the arXiv dataset](https://www.kaggle.com/Cornell-University/arxiv) provided for the Kaggle classification and title genertion challenges. This dataset contains 1.7M+ scholarly papers across STEM, with relevant features such as article titles, authors, categories, abstracts, and more.
 
-## Practical Applications
-
 ## Milestones
 
 - ~Build a classical machine learning classifer for automatic tagging of articles~
