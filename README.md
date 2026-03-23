@@ -1,5 +1,3 @@
-### status: under development
-
 # Viresa: an AI-powered virtual assistant for scientists
 Web-app : https://share.streamlit.io/m-tari/arxiv_interface [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/m-tari/arxiv_interface)
 
